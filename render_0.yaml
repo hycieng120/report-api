@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: quant-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app.main:app
+    envVars:
+      - key: DATABASE_URL
+        value: <your_render_postgres_url>
+      - key: MAIL_FROM
+        value: you@example.com
+      - key: MAIL_TO
+        value: you@example.com
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: 587
+      - key: SMTP_USER
+        value: you@example.com
+      - key: SMTP_PASS
+        value: <app_password>

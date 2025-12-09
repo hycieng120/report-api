@@ -1,0 +1,12 @@
+# 忽略環境設定檔
+.env
+
+# 其他常見忽略項目
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+*.pdf
+*.DS_Store

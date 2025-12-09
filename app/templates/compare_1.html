@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Stock vs Benchmark</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: right; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Stock vs Benchmark Comparison</h1>
+    <table>
+        <tr>
+            <th>Index</th>
+            <th>Stock Return</th>
+            <th>Benchmark Return</th>
+        </tr>
+        {% for s, b in pairs %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ "%.4f"|format(s) }}</td>
+            <td>{{ "%.4f"|format(b) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

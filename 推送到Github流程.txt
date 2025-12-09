@@ -1,0 +1,22 @@
+推送到 GitHub」流程
+
+# 1. 進入專案根目錄
+cd E:\Python量化交易聖經\PythonQuantTrading
+
+# 2. 初始化 Git (如果還沒做過)
+git init
+
+# 3. 新增所有檔案到 Git
+git add .
+
+# 4. 建立第一次 commit
+git commit -m "Add render.yaml for Render deployment"
+
+# 5. 設定 GitHub 遠端 (替換成你的 GitHub repo URL)
+git remote add origin https://github.com/你的帳號/report-api.git
+
+# 6. 確保分支名稱是 main
+git branch -M main
+
+# 7. 推送到 GitHub
+git push -u origin main

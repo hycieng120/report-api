@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Trading Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: right; }
+        th { background-color: #f2f2f2; }
+        img { margin-top: 20px; max-width: 100%; }
+    </style>
+</head>
+<body>
+    <h1>Trading Report</h1>
+
+    <h2>Returns</h2>
+    <table>
+        <tr><th>Index</th><th>Return</th></tr>
+        {% for r in returns %}
+        <tr><td>{{ loop.index }}</td><td>{{ "%.4f"|format(r) }}</td></tr>
+        {% endfor %}
+    </table>
+
+    <h2>Returns Curve</h2>
+    <img src="data:image/png;base64,{{ chart }}" alt="Returns Curve">
+</body>
+</html>

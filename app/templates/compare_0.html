@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Comparison</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1 { color: #333; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: right; }
+    </style>
+</head>
+<body>
+    <h1>Stock vs Benchmark</h1>
+    <table>
+        <tr><th>Index</th><th>Stock</th><th>Benchmark</th></tr>
+        {% for s, b in zip(stock, benchmark) %}
+        <tr><td>{{ loop.index }}</td><td>{{ s }}</td><td>{{ b }}</td></tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
