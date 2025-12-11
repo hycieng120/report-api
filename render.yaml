@@ -11,9 +11,11 @@ services:
           name: report-db
           property: connectionString
       - key: EMAIL_USER
-        value: hyciengvic@gmail.com
+        value: your_email@example.com
       - key: EMAIL_PASS
-        sync: false   # 在 Render Dashboard 手動輸入，避免明文存放
+        sync: false
+    build:
+      pythonVersion: 3.12.2
 
 databases:
   - name: report-db
