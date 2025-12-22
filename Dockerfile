@@ -6,4 +6,4 @@ COPY . .
 RUN pip install --upgrade pip setuptools wheel
 RUN pip install --only-binary=:all: -r requirements.txt
 
-CMD ["gunicorn", "app:api"]
+CMD ["gunicorn", "quant_app.app:api"]
